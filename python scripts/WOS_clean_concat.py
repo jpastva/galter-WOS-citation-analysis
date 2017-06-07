@@ -11,7 +11,7 @@ import glob
 import codecs
 import csv
 
-path = "/*.txt"    # input location of .txt files to convert/concatenate
+path = '/*.txt'    # input location of .txt files to convert/concatenate
 for fname in glob.glob(path):
     with codecs.open(fname, 'r', 'UTF-16LE') as source_file:
         newfname = fname[0:len(fname)-4] + '.csv'
@@ -25,7 +25,7 @@ for fname in glob.glob(path):
                 wr.writerow(temp)
 
 df_list = []
-path = "/*.csv"    # input desired location of converted files                
+path = '/*.csv'    # input desired location of converted files                
 for fname in glob.glob(path):
     df_list.append(pd.read_csv(fname))
 

@@ -15,7 +15,7 @@ These scripts should be run in a Python 3 environment.
 
 1. Run the WOS_clean_concat.py script, specifying the directory containing your WOS .txt files and the desired output directory. This will output .csv files corresponding to each .txt file, and a .pkl file for all of the data combined into one file.
 2. Run the WOS_citation_analysis.py script using the output .pkl file.
-3. OPTIONAL STEP: Add code snippet WOS_specific_journal.py to output publication year of a specific journal title. Must use WOS journal title abbreviation, to be specified after x ==
+3. OPTIONAL STEP: Add code snippet WOS_specific_journal.py to output publication year of a specific journal title(s). Must use WOS journal title abbreviation from MaxCitedJournals list, to be specified jn# ==. Expand code as needed to gather multiple titles at once.
 
 ### Outputs
 
