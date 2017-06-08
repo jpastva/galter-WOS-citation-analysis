@@ -37,6 +37,26 @@ The WOS_citation_analysis.py script will output several .csv data files and gene
 - Figure 4 - Total number of citations per year
 - Figure 5 - Average number of citations per article, per year
 
+## Working with abbreviated titles
+
+The journals titles as extracted from the WOS citations are abbreviated, and as such so is the output when working with the files using Python. One option to automate the retrieval of full titles and ISSN information from the abbreviated titles is to utilize the NLM E-utilities API. This allows you to query the NLM catalog, retrieve matching catalog records when available, and output Title, ISSN, and other fields of your choosing to a file.
+
+**Brief instructions for using NLM's E-utilities**
+
+
+1. In a Unix terminal, install EDirect software (see instructions
+[here](https://dataguide.nlm.nih.gov/edirect/install.html))
+2. Place a list of the journal title abbreviations in your working directory as a .txt file (in this example, titles.txt). The results will be more accurate if each title is enclosed with quotation marks (").
+3. Execute the following search in your Unix terminal:
+
+```
+while read -u 10 list; do esearch -db nlmcatalog -query "$list" | efetch -format xml | xtract -pattern NLMCatalogRecord -element TitleMain/Title MedlineTA TitleAlternate/Title ISSN; done 10< titles.txt > FullJournalTitles.txt
+
+```
+
+For further documentation about E-Utilities, visit the 
+[NLM website](https://dataguide.nlm.nih.gov/)
+
 
 ## Authors 
 
