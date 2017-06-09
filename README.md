@@ -39,7 +39,7 @@ The WOS_citation_analysis.py script will output several .csv data files and gene
 
 ## Working with abbreviated titles
 
-The journals titles as extracted from the WOS citations are abbreviated, and as such so is the output when working with the files using Python. One option to automate the retrieval of full titles and ISSN information from the abbreviated titles is to utilize the NLM E-utilities API. This allows you to query the NLM catalog, retrieve matching catalog records when available, and output Title, ISSN, and other fields of your choosing to a file.
+The journal titles as extracted from the WOS citations are abbreviated, and as such so is the output when working with the files using Python. One option to automate the retrieval of full titles and ISSN information from the abbreviated titles is to utilize the NLM E-utilities API. This allows you to query the NLM catalog, retrieve matching catalog records when available, and output Title, ISSN, and other fields of your choosing to a file.
 
 **Brief instructions for using NLM's E-utilities**
 
